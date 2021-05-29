@@ -3,8 +3,10 @@ import java.text.NumberFormat;
 public class Medicamento {
     String codigo;
     String descripcion;
+    String vencimiento;
+    String prescripcion;
     double precio;
-    protected int unidades = 0;
+    protected int unidad = 0;
     Medicamento(){}
     public String getCodigo() {
         return codigo;
@@ -18,6 +20,18 @@ public class Medicamento {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
+    public String getPrescripcion() {
+        return prescripcion;
+    }
+    public void setPrescripcion(String prescripcion) {
+        this.prescripcion = prescripcion;
+    }
+    public String getVencimiento() {
+        return vencimiento;
+    }
+    public void setVencimiento(String vencimiento) {
+        this.vencimiento = vencimiento;
+    }
     public double getPrecio() {
         return precio;
     }
@@ -27,5 +41,8 @@ public class Medicamento {
     public String getFormattedPrecio(){
         NumberFormat currency = NumberFormat.getCurrencyInstance();
         return currency.format(precio);
+    }
+    public int getUnidad(){
+        return unidad;
     }
 }

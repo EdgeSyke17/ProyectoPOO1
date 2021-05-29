@@ -1,13 +1,19 @@
-public class farmaceutico extends persona {
-    protected int contadorF = 0;
+public class Farmaceutico extends Persona {
     private int nLicencia;
 
-    public farmaceutico(String usuario, String password, String nombre, int nLicencia) {
-        super(usuario, password, nombre);
-        this.nLicencia=nLicencia;
-        contadorF++;
+    public Farmaceutico() {
+        super();
     }
-    private static void vender(){
+    
+    public int getnLicencia() {
+        return nLicencia;
+    }
+
+    public void setnLicencia(int nLicencia) {
+        this.nLicencia = nLicencia;
+    }
+
+    private static void vender(Medicamento medicamento){
 
     }
 }
